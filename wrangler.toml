@@ -1,0 +1,18 @@
+name = "web-bookmarks"
+compatibility_date = "2024-11-21"
+main = "src/index.ts"
+
+# 环境变量 - 在 Cloudflare Dashboard 中配置这些变量
+# 或者使用: wrangler secret put SECRET_KEY
+[vars]
+# SESSION_MAX_AGE = "604800"  # 7天,可选
+# RATE_LIMIT_MAX = "100"      # 速率限制,可选
+# RATE_LIMIT_WINDOW = "60"    # 时间窗口(秒),可选
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bookmarks-db"
+database_id = "bb3a6af2-d0fb-41c3-8700-061cad07d5a6" # 由部署过程自动生成或由用户手动填写
+
+# [observability]
+# enabled = true
